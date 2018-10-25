@@ -3,10 +3,10 @@ import { PLATFORM, FrameworkConfiguration } from 'aurelia-framework';
 import * as LogManager from 'aurelia-logging';
 
 
-export function configure(config: FrameworkConfiguration, configCallback:(config:MdlConfigBuilder) => any): void {
-  let builder = config.container.get(MdlConfigBuilder);
+export function configure(config: FrameworkConfiguration, configCallback: (config: MdlConfigBuilder) => any): void {
+  let builder = config.container.get(MdlConfigBuilder) as MdlConfigBuilder;
   let logger = LogManager.getLogger('aurelia-mdl');
-  if (configCallback !== undefined && typeof(configCallback) === 'function') {
+  if (configCallback !== undefined && typeof (configCallback) === 'function') {
     configCallback(builder);
   }
 

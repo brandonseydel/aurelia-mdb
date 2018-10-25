@@ -6,7 +6,7 @@ import { constants } from '../common/constants';
 * A value of a selected button is bound to a variable specified via ngModel.
 */
 @autoinject()
-@customAttribute(`${constants.attributePrefix}Radio`, null, [`${constants.attributePrefix}radio`])
+@customAttribute(`${constants.attributePrefix}radio`, null, [])
 export class Radio {
     public onChange: any = Function.prototype;
     public onTouched: any = Function.prototype;

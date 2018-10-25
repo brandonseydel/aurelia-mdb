@@ -3,11 +3,7 @@ import { customAttribute } from 'aurelia-framework';
 import { constants } from '../common/constants';
 
 @autoinject()
-@customAttribute(`${constants.attributePrefix}waveseffect`, null, [
-    `${constants.attributePrefix}WavesEffect`,
-    `${constants.attributePrefix}Waveseffect`,
-    `${constants.attributePrefix}wavesEffect`
-])
+@customAttribute(`${constants.attributePrefix}waveseffect`, null, [])
 export class MdbWavesEffect {
 
     constructor(private element: Element) {

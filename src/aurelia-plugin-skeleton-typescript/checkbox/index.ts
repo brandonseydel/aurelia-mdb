@@ -3,14 +3,10 @@ import { customAttribute, bindable } from 'aurelia-framework';
 import { constants } from '../common/constants';
 
 @autoinject()
-@customAttribute(`${constants.elementPrefix}Checkbox`, null, [`${constants.elementPrefix}checkbox`])
+@customAttribute(`${constants.attributePrefix}checkbox`, null)
 export class Checkbox {
-    @bindable({
-        attribute: 'btnCheckboxTrue'
-    }) public btnCheckboxTrue: any = true;
-    @bindable({
-        attribute: 'btnCheckboxFalse'
-    }) public btnCheckboxFalse: any = false;
+    @bindable  public checkedValue: any = true;
+    @bindable public uncheckedValue: any = false;
     @bindable public value: any;
 
 

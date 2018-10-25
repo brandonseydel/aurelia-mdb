@@ -1,13 +1,14 @@
-import { inlineView, bindable, autoinject, computedFrom, containerless } from 'aurelia-framework';
+import { constants } from './../common/constants';
+import { inlineView, bindable, autoinject, customElement, computedFrom } from 'aurelia-framework';
 
 @autoinject
-@containerless()
+@customElement(`${constants.elementPrefix}icon`)
 @inlineView(`
 <template>
   <i class.bind="class"></i>
 </template>
 `)
-export class Fa {
+export class Icon {
 
   @bindable
   private stack?: string;
@@ -37,7 +38,6 @@ export class Fa {
     this.pulse = element.hasAttribute('pulse');
     this.fixed = element.hasAttribute('fixed');
     this.classList = element.getAttribute('class');
-    console.log(element);
   }
 
   @computedFrom(
