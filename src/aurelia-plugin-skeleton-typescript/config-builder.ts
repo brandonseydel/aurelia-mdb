@@ -33,8 +33,16 @@ export class MdlConfigBuilder {
     this.badge();
     this.breadcrumb();
     this.card();
+    this.carousel();
     return this;
   }
+
+  public carousel(): MdlConfigBuilder {
+    this.resources.push(PLATFORM.moduleName('./carousel/carousel'));
+    this.resources.push(PLATFORM.moduleName('./carousel/slide'));
+    return this;
+  }
+
 
   public card(): MdlConfigBuilder {
     this.resources.push(PLATFORM.moduleName('./card/card'));

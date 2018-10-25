@@ -10,7 +10,8 @@ const {
   Sparky,
   HTMLPlugin,
   CSSPlugin,
-  RawPlugin
+  RawPlugin,
+  CopyPlugin
 } = require('fuse-box');
 // @ts-ignore
 const FOLDER_NAME = require('../package.json').folder_name;
@@ -84,6 +85,7 @@ Sparky.task('config', () => {
     // Need to be the same..(alias cant be anything since its really on transpile fusebox does this)
     plugins: [
       bootstrapLoader(),
+      CopyPlugin({ files: [".svg"] }),
       CSSPlugin(),
       HTMLPlugin(),
       RawPlugin(['.css', '.woff']),
